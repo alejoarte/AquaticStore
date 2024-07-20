@@ -2,7 +2,7 @@
     {
         "id": "fastkin-01",
         "title": "Fastkin 01",
-        "image": "./img/fastkin-lzr-pure-male.webp",
+        "image": "./img/fastkin-googles-1.jpg",
         "category": {
             "name": "Competition Suits",
             "id": "fastkins"
@@ -12,7 +12,7 @@
     {
         "id": "googles-01",
         "title": "Googles 01",
-        "image": "./img/fastkin-lzr-pure-male.webp",
+        "image": "./img/fastkin-googles-2.jpg",
         "category": {
             "name": "Googles",
             "id": "googles"
@@ -22,7 +22,17 @@
     {
         "id": "training-item-01",
         "title": "Training item 01",
-        "image": "./img/fastkin-lzr-pure-male.webp",
+        "image": "./img/fastkin-googles-3.jpg",
+        "category": {
+            "name": "Training Items",
+            "id": "training-items"
+        },
+        "price": 2000
+    },
+    {
+        "id": "training-item-01",
+        "title": "Training item 01",
+        "image": "./img/fastkin-googles-4.jpg",
         "category": {
             "name": "Training Items",
             "id": "training-items"

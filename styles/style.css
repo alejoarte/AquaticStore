@@ -38,7 +38,7 @@ aside {
     padding: 2rem;
     padding-right: 0;
     color: var(--color-white);
-    /* Para que nos persiga como bajemos algo como bloquearlo*/
+    /* So that it follows us when we lower something on the page, such as blocking it */
     position: sticky;
     top: 0;
     height: 100vh;
@@ -145,19 +145,25 @@ main {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
+    width: 1000px;
+    height: 300px;
+    object-fit: cover;
 }
 
 .product-image {
     max-width: 100%;
-    border-radius: 1rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
 }
 
 .product-details {
     background-color: var(--color-main);
     color: var(--color-white);
     padding: .5rem;
-    border-radius: 1rem;
-    margin-top: -2rem;
+    border-radius: .5rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    margin-top: -.2rem;
     position: relative;
     display: flex;
     flex-direction: column;

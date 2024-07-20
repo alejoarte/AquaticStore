@@ -26,9 +26,11 @@ function uploadProducts(chosenProducts) {
     chosenProducts.forEach(product => {
 
         const div = document.createElement("div");
-        div.classList.add("producto");
+        div.classList.add("product");
         div.innerHTML = `
-            <img class="product-image" src="${product.image}" alt="${product.title}">
+            <div class="product-image-container">
+                <img class="product-image" src="${product.image}" alt="${product.title}">
+            </div>
             <div class="product-details">
                 <h3 class="product-title">${product.title}</h3>
                 <p class="product-price">$${product.price}</p>
