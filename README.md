@@ -20,11 +20,11 @@
 
 1. Clona este repositorio en tu máquina local:
     ```sh
-    git clone https://github.com/alejoarte/AcuaticStore.git
+    git clone https://github.com/alejoarte/AquaticStore.git
     ```
 2. Navega al directorio del proyecto:
     ```sh
-    cd AcuaticStore
+    cd AquaticStore
     ```
 
 ## Uso

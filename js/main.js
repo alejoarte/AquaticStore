@@ -1,35 +1,76 @@
-// Using Fetch to load the products
 const url = "./js/products.json";
 let products = [];
+
+const TOAST_STYLE = {
+    background: "linear-gradient(to right, #0ea5e9 0%, #0284c7 100%)",
+    borderRadius: "2rem",
+    textTransform: "uppercase",
+    fontSize: ".75rem"
+};
 
 fetch(url)
     .then(response => response.json())
     .then(data => {
         products = data;
         uploadProducts(products);
-    })
+    });
 
 const productsContainer = document.querySelector("#products-container");
 const buttonsCategories = document.querySelectorAll(".btn-category");
+const buttonsCategoriesMobile = document.querySelectorAll(".btn-category-mobile");
 const mainTitle = document.querySelector("#main-title");
-let addButtons = document.querySelectorAll(".product-add")
+let addButtons = document.querySelectorAll(".product-add");
 const numberItems = document.querySelector("#number-items");
 
-buttonsCategories.forEach(button => button.addEventListener("click", () => {
-    aside.classList.remove("aside-visible");
-}))
+function handleImageError(img) {
+    img.classList.add("image-error");
+    img.closest(".product-image-container")?.classList.add("image-error");
+}
+
+function filterProducts(buttonId) {
+    buttonsCategories.forEach(button => {
+        button.classList.toggle("active", button.id === buttonId);
+    });
+
+    buttonsCategoriesMobile.forEach(button => {
+        button.classList.toggle("active", button.dataset.target === buttonId);
+    });
+
+    if (buttonId !== "all-products") {
+        const productCategory = products.find(product => product.category.id === buttonId);
+        mainTitle.innerText = productCategory.category.name;
+        const productsButton = products.filter(product => product.category.id === buttonId);
+        uploadProducts(productsButton);
+    } else {
+        mainTitle.innerText = "Todos los productos";
+        uploadProducts(products);
+    }
+
+    window.closeMobileNav?.();
+}
+
+buttonsCategories.forEach(button => {
+    button.addEventListener("click", (e) => {
+        filterProducts(e.currentTarget.id);
+    });
+});
+
+buttonsCategoriesMobile.forEach(button => {
+    button.addEventListener("click", () => {
+        filterProducts(button.dataset.target);
+    });
+});
 
 function uploadProducts(chosenProducts) {
-
     productsContainer.innerHTML = "";
 
     chosenProducts.forEach(product => {
-
         const div = document.createElement("div");
         div.classList.add("product");
         div.innerHTML = `
             <div class="product-image-container">
                 <img class="product-image" src="${product.image}" alt="${product.title}">
+                <span class="product-category">${product.category.name}</span>
             </div>
             <div class="product-details">
                 <h3 class="product-title">${product.title}</h3>
@@ -38,37 +79,21 @@ function uploadProducts(chosenProducts) {
             </div>
         `;
 
+        const img = div.querySelector(".product-image");
+        img.addEventListener("error", () => handleImageError(img));
+
         productsContainer.append(div);
-    })
+    });
     updateButtonsAdd();
 }
 
-
-buttonsCategories.forEach(button => {
-    button.addEventListener("click", (e) => {
-        buttonsCategories.forEach(button => button.classList.remove("active"));
-        e.currentTarget.classList.add("active");
-
-        if (e.currentTarget.id != "all-products") {
-            const productCategory = products.find(product => product.category.id === e.currentTarget.id)
-            mainTitle.innerText = productCategory.category.name;
-            
-            const productsButton = products.filter(product => product.category.id === e.currentTarget.id)
-            uploadProducts(productsButton);
-        } else {
-            mainTitle.innerText = "Todos los Productos"
-            uploadProducts(products);
-        }
-    })
-});
-
 function updateButtonsAdd() {
     addButtons = document.querySelectorAll(".product-add");
-    
+
     addButtons.forEach(button => {
         button.addEventListener("click", addToCart);
-    })
-};
+    });
+}
 
 let itemsInCart;
 let itemsInCartLS = localStorage.getItem("items-in-cart");
@@ -81,32 +106,25 @@ if (itemsInCartLS) {
 }
 
 function addToCart(e) {
-
-    // Creating the added message successfully with Toastify 
     Toastify({
         text: "Producto agregado",
         duration: 3000,
         close: true,
-        gravity: "top", // `top` or `bottom`
-        position: "right", // `left`, `center` or `right`
-        stopOnFocus: true, // Prevents dismissing of toast on hover
-        style: {
-          background: "linear-gradient(to right, #4facfe 0%, #00f2fe 100%)",
-          borderRadius: "2rem",
-          textTransform: "uppercase",
-          fontSize: ".75rem"
-        },
+        gravity: "top",
+        position: "right",
+        stopOnFocus: true,
+        style: TOAST_STYLE,
         offset: {
-            x: '1.5rem', // horizontal axis - can be a number or a string indicating unity. eg: '2em'
-            y: '1.5rem' // vertical axis - can be a number or a string indicating unity. eg: '2em'
-          },
-        onClick: function(){} // Callback after click
-      }).showToast();
+            x: "1.5rem",
+            y: "1.5rem"
+        },
+        onClick: function() {}
+    }).showToast();
 
     const idButton = e.currentTarget.id;
     const productAdded = products.find(product => product.id === idButton);
-    
-    if (itemsInCart.some(product => product.id === idButton)) {    
+
+    if (itemsInCart.some(product => product.id === idButton)) {
         const index = itemsInCart.findIndex(product => product.id === idButton);
         itemsInCart[index].quantity++;
     } else {
@@ -115,11 +133,10 @@ function addToCart(e) {
     }
 
     updateNumberItems();
-
     localStorage.setItem("items-in-cart", JSON.stringify(itemsInCart));
-};
+}
 
 function updateNumberItems() {
     let newNumberItems = itemsInCart.reduce((acc, product) => acc + product.quantity, 0);
     numberItems.innerText = newNumberItems;
-};
+}

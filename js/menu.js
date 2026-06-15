@@ -1,11 +1,29 @@
-const openMenu = document.querySelector("#open-menu");
-const closeMenu = document.querySelector("#close-menu");
-const aside = document.querySelector("aside");
+(function () {
+    const openMenu = document.querySelector("#open-menu");
+    const closeMenu = document.querySelector("#close-menu");
+    const mobileNav = document.querySelector("#mobile-nav");
 
-openMenu.addEventListener("click", () => {
-    aside.classList.add("visible-aside");
-})
+    window.closeMobileNav = function () {
+        if (mobileNav) mobileNav.classList.remove("open");
+    };
 
-closeMenu.addEventListener("click", () => {
-    aside.classList.remove("visible-aside");
-})
+    if (openMenu && mobileNav) {
+        openMenu.addEventListener("click", () => {
+            mobileNav.classList.add("open");
+        });
+    }
+
+    if (closeMenu && mobileNav) {
+        closeMenu.addEventListener("click", () => {
+            window.closeMobileNav();
+        });
+    }
+
+    if (mobileNav) {
+        mobileNav.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", () => {
+                window.closeMobileNav();
+            });
+        });
+    }
+})();

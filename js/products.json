@@ -1,40 +1,40 @@
 [
     {
         "id": "fastkin-01",
-        "title": "Fastkin 01",
-        "image": "./img/fastkin-googles-1.jpg",
+        "title": "Traje Fastkin 01",
+        "image": "./img/1.png",
         "category": {
-            "name": "Competition Suits",
+            "name": "Trajes de competición",
             "id": "fastkins"
         },
         "price": 1000
     },
     {
         "id": "googles-01",
-        "title": "Googles 01",
-        "image": "./img/fastkin-googles-2.jpg",
+        "title": "Gafas 01",
+        "image": "./img/2.png",
         "category": {
-            "name": "Googles",
+            "name": "Gafas",
             "id": "googles"
         },
         "price": 2000
     },
     {
         "id": "training-item-01",
-        "title": "Training item 01",
-        "image": "./img/fastkin-googles-3.jpg",
+        "title": "Implemento 01",
+        "image": "./img/1.png",
         "category": {
-            "name": "Training Items",
+            "name": "Implementos",
             "id": "training-items"
         },
         "price": 2000
     },
     {
         "id": "training-item-01",
-        "title": "Training item 01",
-        "image": "./img/fastkin-googles-4.jpg",
+        "title": "Implemento 01",
+        "image": "./img/2.png",
         "category": {
-            "name": "Training Items",
+            "name": "Implementos",
             "id": "training-items"
         },
         "price": 2000
