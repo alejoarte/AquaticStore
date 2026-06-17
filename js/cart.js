@@ -54,6 +54,7 @@ function loadProductsCart() {
         emptyCartContainer.classList.remove("disabled");
         cartProductsContainer.classList.add("disabled");
         cartActionsContainer.classList.add("disabled");
+        cartProductsContainer.innerHTML = "";
         
     }
     updateDeleteButtons();
