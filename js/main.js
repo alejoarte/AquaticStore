@@ -1,5 +1,7 @@
 const url = "./js/products.json";
 let products = [];
+let currentCategory = "all-products";
+let currentSort = "price-asc";
 
 const CATEGORY_LABELS = {
     googles: "Gafas",
@@ -18,19 +20,44 @@ fetch(url)
     .then(response => response.json())
     .then(data => {
         products = data;
-        uploadProducts(products);
+        renderProducts();
     });
 
 const productsContainer = document.querySelector("#products-container");
 const buttonsCategories = document.querySelectorAll(".btn-category");
 const buttonsCategoriesMobile = document.querySelectorAll(".btn-category-mobile");
 const mainTitle = document.querySelector("#main-title");
+const sortProductsSelect = document.querySelector("#sort-products");
 let addButtons = document.querySelectorAll(".product-add");
 const numberItems = document.querySelector("#number-items");
 
 function handleImageError(img) {
     img.classList.add("image-error");
     img.closest(".product-image-container")?.classList.add("image-error");
+}
+
+function getFilteredProducts() {
+    if (currentCategory === "all-products") {
+        return products;
+    }
+
+    return products.filter(product => product.category.id === currentCategory);
+}
+
+function sortProducts(list) {
+    const sorted = [...list];
+
+    if (currentSort === "price-asc") {
+        sorted.sort((a, b) => a.price - b.price);
+    } else if (currentSort === "price-desc") {
+        sorted.sort((a, b) => b.price - a.price);
+    }
+
+    return sorted;
+}
+
+function renderProducts() {
+    uploadProducts(sortProducts(getFilteredProducts()));
 }
 
 function filterProducts(buttonId) {
@@ -42,15 +69,12 @@ function filterProducts(buttonId) {
         button.classList.toggle("active", button.dataset.target === buttonId);
     });
 
-    if (buttonId !== "all-products") {
-        mainTitle.innerText = CATEGORY_LABELS[buttonId] ?? "Todos los productos";
-        const productsButton = products.filter(product => product.category.id === buttonId);
-        uploadProducts(productsButton);
-    } else {
-        mainTitle.innerText = "Todos los productos";
-        uploadProducts(products);
-    }
+    currentCategory = buttonId;
+    mainTitle.innerText = buttonId === "all-products"
+        ? "Todos los productos"
+        : (CATEGORY_LABELS[buttonId] ?? "Todos los productos");
 
+    renderProducts();
     window.closeMobileNav?.();
 }
 
@@ -64,6 +88,11 @@ buttonsCategoriesMobile.forEach(button => {
     button.addEventListener("click", () => {
         filterProducts(button.dataset.target);
     });
+});
+
+sortProductsSelect.addEventListener("change", (e) => {
+    currentSort = e.target.value;
+    renderProducts();
 });
 
 function uploadProducts(chosenProducts) {

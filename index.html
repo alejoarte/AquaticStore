@@ -55,7 +55,17 @@
         </section>
 
         <section class="catalog">
-            <h2 id="main-title" class="main-title">Todos los productos</h2>
+            <div class="catalog-toolbar">
+                <h2 id="main-title" class="main-title">Todos los productos</h2>
+                <label class="catalog-sort" for="sort-products">
+                    <span class="catalog-sort-label">Ordenar por</span>
+                    <select id="sort-products" class="catalog-sort-select">
+                        <option value="default">Predeterminado</option>
+                        <option value="price-asc" selected>Precio: menor a mayor</option>
+                        <option value="price-desc">Precio: mayor a menor</option>
+                    </select>
+                </label>
+            </div>
             <div id="products-container" class="products-container"></div>
         </section>
     </main>

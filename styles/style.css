@@ -253,12 +253,40 @@ button {
     margin-bottom: 2rem;
 }
 
+.catalog-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
 .main-title {
     font-size: 1.5rem;
     font-weight: 600;
     color: var(--text);
-    margin-bottom: 1.5rem;
+    margin-bottom: 0;
     letter-spacing: -0.01em;
+}
+
+.catalog-sort {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+}
+
+.catalog-sort-select {
+    border: 1px solid var(--border);
+    background-color: var(--surface);
+    color: var(--text);
+    border-radius: var(--radius);
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+    font-family: inherit;
+    cursor: pointer;
 }
 
 .products-container {
