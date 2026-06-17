@@ -1,20 +1,21 @@
-# Tienda de Artículos de Natación
+# AquaticStore
 
-¡Bienvenido a nuestra tienda en línea de artículos de natación! Este proyecto es una aplicación web que permite a los usuarios explorar y comprar una variedad de productos relacionados con la natación.
+Tienda en línea de equipamiento para nadadores. AquaticStore permite explorar gafas, trajes de competición e implementos de entrenamiento, agregarlos al carrito y consultar la compra por WhatsApp.
 
 ## Características
 
-- **Navegación de Productos:** Los usuarios pueden navegar por una variedad de productos de natación, organizados por categorías.
-- **Carrito de Compras:** Los usuarios pueden agregar productos a su carrito, actualizar las cantidades y eliminar productos.
-- **Guardado en Local Storage:** El contenido del carrito se guarda en el almacenamiento local del navegador, permitiendo a los usuarios mantener sus selecciones entre sesiones.
-- **Proceso de Compra:** Los usuarios pueden vaciar el carrito o proceder a la compra de los productos seleccionados.
+- **Navegación de productos:** Catálogo organizado por categorías con ordenamiento por precio.
+- **Carrito de compras:** Agregar, eliminar y vaciar productos con confirmaciones claras.
+- **Persistencia local:** El carrito se guarda en `localStorage` entre sesiones.
+- **Consulta por WhatsApp:** Envío del pedido formateado al número configurado.
 
 ## Tecnologías Utilizadas
 
 - **HTML5** para la estructura de la página web.
 - **CSS3** para el diseño y la presentación.
 - **JavaScript** para la interactividad y la lógica del carrito de compras.
-- **Local Storage** para almacenar de manera persistente el contenido del carrito de compras.
+- **Toastify.js** y **SweetAlert2** para notificaciones y confirmaciones.
+- **Local Storage** para almacenar de manera persistente el contenido del carrito.
 
 ## Instalación
 
@@ -26,27 +27,30 @@
     ```sh
     cd AquaticStore
     ```
+3. (Opcional) Copia `js/config.example.js` a `js/config.js` y configura tu número de WhatsApp.
 
 ## Uso
 
 1. Abre el archivo `index.html` en tu navegador web preferido.
-2. Navega por los productos disponibles y agrega los que desees al carrito de compras.
-3. Revisa el carrito de compras, actualiza las cantidades o elimina productos según sea necesario.
-4. Procede con la compra o vacía el carrito si decides no realizar la compra.
+2. Navega por los productos disponibles y agrega los que desees al carrito.
+3. Revisa el carrito en `cart.html`, elimina productos o vacíalo si es necesario.
+4. Consulta la compra por WhatsApp desde el carrito.
 
 ## Estructura del Proyecto
-```plaintext
-├── css
-│ └── styles.css # Estilos de la página web
-├── img
-│ └── ... # Imágenes de los productos
-├── js
-│ └── main.js # Lógica de la aplicación
-| └── mcart.js # Lógica del carrito
-| └── menu.js # Lógica del menu
-├── index.html # Página principal
-└── README.md # Este archivo
-```
-## Agradecimientos
 
-Este proyecto fue realizado siguiendo una guía en video de carpicoder. Gran parte de la estructura y lógica de la aplicación se basan en las enseñanzas de dicho recurso. Agradecemos enormemente a carpicoder por proporcionar contenido educativo de alta calidad.
+```plaintext
+├── img/                  # Imágenes de productos
+├── js/
+│   ├── cart.js           # Lógica del carrito
+│   ├── config.example.js # Plantilla de configuración
+│   ├── currency.js       # Formato de precios
+│   ├── main.js           # Catálogo y agregar al carrito
+│   ├── menu.js           # Menú móvil
+│   ├── notifications.js  # Toasts y diálogos de confirmación
+│   └── products.json     # Datos del catálogo
+├── styles/
+│   └── style.css         # Estilos globales
+├── cart.html             # Página del carrito
+├── index.html            # Página principal
+└── README.md
+```

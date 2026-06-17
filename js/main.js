@@ -9,13 +9,6 @@ const CATEGORY_LABELS = {
     "training-items": "Implementos"
 };
 
-const TOAST_STYLE = {
-    background: "linear-gradient(to right, #0ea5e9 0%, #0284c7 100%)",
-    borderRadius: "2rem",
-    textTransform: "uppercase",
-    fontSize: ".75rem"
-};
-
 fetch(url)
     .then(response => response.json())
     .then(data => {
@@ -145,20 +138,7 @@ if (itemsInCartLS) {
 }
 
 function addToCart(e) {
-    Toastify({
-        text: "Producto agregado",
-        duration: 3000,
-        close: true,
-        gravity: "top",
-        position: "right",
-        stopOnFocus: true,
-        style: TOAST_STYLE,
-        offset: {
-            x: "1.5rem",
-            y: "1.5rem"
-        },
-        onClick: function() {}
-    }).showToast();
+    showToast("Agregado al carrito");
 
     const idButton = e.currentTarget.id;
     const productAdded = products.find(product => product.id === idButton);

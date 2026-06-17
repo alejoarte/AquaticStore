@@ -71,80 +71,40 @@ function updateDeleteButtons() {
 };
 
 function removeFromCart(e) {
-
     const idButton = e.currentTarget.id;
     const index = itemsInCart.findIndex(product => product.id === idButton);
 
-    // Show SweetAlert to confirm the delete of a product
-    Swal.fire({
-        title: "¿Está seguro de eliminar este producto?",
+    confirmAction({
+        title: "¿Eliminar este producto?",
         icon: "question",
-        confirmButtonText: "Sí",
-        cancelButtonText: "No",
-        showCancelButton: true,
         showCloseButton: true
     }).then((result) => {
         if (result.isConfirmed) {
-            // Creating the eliminated message successfully with Toastify 
-            Toastify({
-                text: "Producto eliminado",
-                duration: 3000,
-                close: true,
-                gravity: "top", // `top` or `bottom`
-                position: "right", // `left`, `center` or `right`
-                stopOnFocus: true, // Prevents dismissing of toast on hover
-                style: {
-                    background: "linear-gradient(to right, #0ea5e9 0%, #0284c7 100%)",
-                    borderRadius: "2rem",
-                    textTransform: "uppercase",
-                    fontSize: ".75rem"
-                },
-                offset: {
-                    x: '1.5rem', // horizontal axis - can be a number or a string indicating unity. eg: '2em'
-                    y: '1.5rem' // vertical axis - can be a number or a string indicating unity. eg: '2em'
-                },
-                onClick: function(){} // Callback after click
-            }).showToast();
-
+            showToast("Producto eliminado del carrito");
             itemsInCart.splice(index, 1);
             loadProductsCart();
-        
             localStorage.setItem("items-in-cart", JSON.stringify(itemsInCart));
         }
     });
-
 };
 
 emptyCartButton.addEventListener("click", emptyCart);
 
 function emptyCart() {
-    // Creating the sweetalert for confirmation when we are empting the cart
-    Swal.fire({
-        title: "¿Estás seguro?",
-        html: `Se van a borrar ${itemsInCart.reduce((acc, product) => acc + product.quantity, 0)} productos.`,
-        icon: "warning",
-        showCancelButton: true,
-        confirmButtonColor: "#0ea5e9",
-        cancelButtonColor: "#dc2626",
-        confirmButtonText: "Sí",
-        cancelButtonText: 'No',
-        iconColor: '#0ea5e9'
+    const itemCount = itemsInCart.reduce((acc, product) => acc + product.quantity, 0);
+
+    confirmAction({
+        title: "¿Vaciar el carrito?",
+        html: `Se van a eliminar ${itemCount} producto${itemCount === 1 ? "" : "s"}.`,
+        icon: "warning"
     }).then((result) => {
         if (result.isConfirmed) {
             itemsInCart.length = 0;
             localStorage.setItem("items-in-cart", JSON.stringify(itemsInCart));
             loadProductsCart();
-            Swal.fire({
-                title: "😢",
-                text: "Tus artículos fueron eliminados.",
-                icon: "success",
-                confirmButtonColor: "#0ea5e9",
-                confirmButtonText: "Aceptar"
-            });
+            showToast("Carrito vaciado");
         }
     });
-
-
 };
 
 function updateTotal() {
@@ -173,12 +133,10 @@ function buildWhatsAppMessage(items) {
 
 function openWhatsAppInquiry() {
     if (!WHATSAPP_NUMBER) {
-        Swal.fire({
+        showInfoDialog({
             title: "WhatsApp no configurado",
             text: "El número de WhatsApp aún no está configurado. Por favor, contactá al administrador del sitio.",
-            icon: "info",
-            confirmButtonColor: "#25D366",
-            confirmButtonText: "Aceptar"
+            confirmColor: "#25D366"
         });
         return;
     }

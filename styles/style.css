@@ -95,6 +95,10 @@ button {
     color: var(--accent);
 }
 
+.brand-accent {
+    color: var(--accent);
+}
+
 .nav-desktop {
     display: flex;
     align-items: center;
@@ -228,9 +232,22 @@ button {
 /* ── Hero ── */
 
 .hero {
+    position: relative;
     text-align: center;
-    padding: 2.5rem 1rem 3rem;
-    margin-bottom: 1rem;
+    padding: 3rem 1rem 3.5rem;
+    margin: -2rem -1.5rem 2rem;
+    background: linear-gradient(180deg, var(--accent-light) 0%, var(--bg) 100%);
+    border-bottom: 1px solid var(--border);
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 24px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 24' preserveAspectRatio='none'%3E%3Cpath fill='%23f4f7fb' d='M0 12 Q150 0 300 12 T600 12 T900 12 T1200 12 V24 H0 Z'/%3E%3C/svg%3E") center bottom / 100% 100% no-repeat;
 }
 
 .hero-title {
@@ -608,14 +625,52 @@ button {
 .site-footer {
     border-top: 1px solid var(--border);
     background-color: var(--surface);
-    padding: 1.25rem 1.5rem;
+    padding: 1.75rem 1.5rem;
     text-align: center;
 }
 
-.site-footer p {
-    font-size: 0.75rem;
+.footer-brand {
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text);
+    letter-spacing: -0.01em;
+    margin-bottom: 0.25rem;
+}
+
+.footer-tagline {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+}
+
+.footer-copy {
+    font-size: 0.7rem;
     color: var(--text-muted);
     letter-spacing: 0.02em;
+    opacity: 0.85;
+}
+
+/* ── Notifications ── */
+
+.toast-aquatic {
+    font-family: var(--font-body) !important;
+    text-transform: none !important;
+}
+
+.swal-aquatic-popup {
+    border-radius: var(--radius) !important;
+    font-family: var(--font-body) !important;
+    box-shadow: var(--shadow-lg) !important;
+}
+
+.swal-aquatic-confirm,
+.swal-aquatic-cancel {
+    border-radius: var(--radius-pill) !important;
+    font-family: var(--font-body) !important;
+    font-weight: 500 !important;
+    font-size: 0.875rem !important;
+    padding: 0.5rem 1.25rem !important;
 }
 
 /* ── Responsive ── */
@@ -638,7 +693,8 @@ button {
     }
 
     .hero {
-        padding: 1.5rem 0.5rem 2rem;
+        padding: 2rem 0.5rem 2.5rem;
+        margin: -1.5rem -1rem 1.5rem;
     }
 
     .product-cart {
