@@ -644,6 +644,28 @@ button {
     margin-bottom: 0.5rem;
 }
 
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.footer-social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    color: var(--text-muted);
+    font-size: 1.25rem;
+    transition: color 0.2s;
+}
+
+.footer-social-link:hover {
+    color: var(--accent);
+}
+
 .footer-copy {
     font-size: 0.7rem;
     color: var(--text-muted);
