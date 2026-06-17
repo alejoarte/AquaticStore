@@ -37,11 +37,11 @@ function loadProductsCart() {
                 </div>
                 <div class="cart-product-price">
                     <small>Precio</small>
-                    <p>$${product.price}</p>
+                    <p>${formatPrice(product.price)}</p>
                 </div>
                 <div class="cart-product-subtotal">
                     <small>Subtotal</small>
-                    <p>$${product.price * product.quantity}</p>
+                    <p>${formatPrice(product.price * product.quantity)}</p>
                 </div>
                 <button class="delete-product-cart" id="${product.id}"><i class="bi bi-trash-fill"></i></button>
             `;
@@ -149,7 +149,7 @@ function emptyCart() {
 
 function updateTotal() {
     const totalCalculated = itemsInCart.reduce((acc, product) => acc + (product.price * product.quantity), 0);
-    total.innerText = `$${totalCalculated}`;
+    total.innerText = formatPrice(totalCalculated);
 };
 
 whatsappButton.addEventListener("click", openWhatsAppInquiry);
@@ -157,7 +157,7 @@ whatsappButton.addEventListener("click", openWhatsAppInquiry);
 function buildWhatsAppMessage(items) {
     const lines = items.map(product => {
         const subtotal = product.price * product.quantity;
-        return `• ${product.title} — Cantidad: ${product.quantity} — $${product.price} c/u — Subtotal: $${subtotal}`;
+        return `• ${product.title} — Cantidad: ${product.quantity} — ${formatPrice(product.price)} c/u — Subtotal: ${formatPrice(subtotal)}`;
     });
 
     const total = items.reduce((acc, product) => acc + (product.price * product.quantity), 0);
@@ -167,7 +167,7 @@ function buildWhatsAppMessage(items) {
         "",
         ...lines,
         "",
-        `Total: $${total}`
+        `Total: ${formatPrice(total)}`
     ].join("\n");
 }
 

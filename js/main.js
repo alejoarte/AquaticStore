@@ -84,7 +84,7 @@ function uploadProducts(chosenProducts) {
             </div>
             <div class="product-details">
                 <h3 class="product-title">${product.title}</h3>
-                <p class="product-price">$${product.price}</p>
+                <p class="product-price">${formatPrice(product.price)}</p>
                 <button class="product-add" id="${product.id}">Agregar</button>
             </div>
         `;

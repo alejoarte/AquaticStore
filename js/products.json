@@ -7,7 +7,7 @@
             "name": "Gafas",
             "id": "googles"
         },
-        "price": 1000
+        "price": 260000
     },
     {
         "id": "speedsocket-2.0-blanco-azul-plateado",
@@ -17,87 +17,7 @@
             "name": "Gafas",
             "id": "googles"
         },
-        "price": 1000
-    },
-        {
-        "id": "speedsocket-2.0-blanco-azul-verde",
-        "title": "Speedsocket 2.0 Azul/Verde",
-        "image": "./img/googles/speedsocket-2.0-azul-verde.png",
-        "category": {
-            "name": "Gafas",
-            "id": "googles"
-        },
-        "price": 1000
-    },
-    {
-        "id": "speedsocket-2.0-blanco-plata",
-        "title": "Speedsocket 2.0 Blanco/Plata",
-        "image": "./img/googles/speedsocket-2.0-blanco-plata.png",
-        "category": {
-            "name": "Gafas",
-            "id": "googles"
-        },
-        "price": 1000
-    },
-    {
-        "id": "speedsocket-2.0-blanco-vapor",
-        "title": "Speedsocket 2.0 Blanco/Vapor",
-        "image": "./img/googles/speedsocket-2.0-blanco-vapor.png",
-        "category": {
-            "name": "Gafas",
-            "id": "googles"
-        },
-        "price": 1000
-    },
-    {
-        "id": "speedsocket-2.0-naranja-verde-rosa-azul",
-        "title": "Speedsocket 2.0 Naranja/Verde/Rosa/Azul",
-        "image": "./img/googles/speedsocket-2.0-naranja-verde-rosa-azul.png",
-        "category": {
-            "name": "Gafas",
-            "id": "googles"
-        },
-        "price": 1000
-    },
-    {
-        "id": "speedsocket-2.0-rojo-azul-vapor",
-        "title": "Speedsocket 2.0 Rojo/Azul/Vapor",
-        "image": "./img/googles/speedsocket-2.0-rojo-azul-vapor.png",
-        "category": {
-            "name": "Gafas",
-            "id": "googles"
-        },
-        "price": 1000
-    },
-    {
-        "id": "speedsocket-2.0-rojo-humo",
-        "title": "Speedsocket 2.0 Rojo/Humo",
-        "image": "./img/googles/speedsocket-2.0-rojo-humo.png",
-        "category": {
-            "name": "Gafas",
-            "id": "googles"
-        },
-        "price": 1000
-    },
-    {
-        "id": "speedsocket-2.0-rosa-dorado",
-        "title": "Speedsocket 2.0 Rosa/Dorado",
-        "image": "./img/googles/speedsocket-2.0-rosa-dorado.png",
-        "category": {
-            "name": "Gafas",
-            "id": "googles"
-        },
-        "price": 1000
-    },
-    {
-        "id": "speedsocket-2.0-verde-blanco-dorado",
-        "title": "Speedsocket 2.0 Verde/Blanco/Dorado",
-        "image": "./img/googles/speedsocket-2.0-verde-blanco-dorado.png",
-        "category": {
-            "name": "Gafas",
-            "id": "googles"
-        },
-        "price": 1000
+        "price": 225000
     },
     {
         "id": "speedsocket-2.0-verde-negro-dorado",
@@ -107,7 +27,87 @@
             "name": "Gafas",
             "id": "googles"
         },
-        "price": 1000
+        "price": 225000
+    },
+    {
+        "id": "speedsocket-2.0-blanco-azul-verde",
+        "title": "Speedsocket 2.0 Azul/Verde",
+        "image": "./img/googles/speedsocket-2.0-azul-verde.png",
+        "category": {
+            "name": "Gafas",
+            "id": "googles"
+        },
+        "price": 225000
+    },
+    {
+        "id": "speedsocket-2.0-blanco-plata",
+        "title": "Speedsocket 2.0 Blanco/Plata",
+        "image": "./img/googles/speedsocket-2.0-blanco-plata.png",
+        "category": {
+            "name": "Gafas",
+            "id": "googles"
+        },
+        "price": 260000
+    },
+    {
+        "id": "speedsocket-2.0-blanco-vapor",
+        "title": "Speedsocket 2.0 Blanco/Vapor",
+        "image": "./img/googles/speedsocket-2.0-blanco-vapor.png",
+        "category": {
+            "name": "Gafas",
+            "id": "googles"
+        },
+        "price": 225000
+    },
+    {
+        "id": "speedsocket-2.0-rojo-humo",
+        "title": "Speedsocket 2.0 Rojo/Humo",
+        "image": "./img/googles/speedsocket-2.0-rojo-humo.png",
+        "category": {
+            "name": "Gafas",
+            "id": "googles"
+        },
+        "price": 200000
+    },
+    {
+        "id": "speedsocket-2.0-naranja-verde-rosa-azul",
+        "title": "Speedsocket 2.0 Naranja/Verde/Rosa/Azul",
+        "image": "./img/googles/speedsocket-2.0-naranja-verde-rosa-azul.png",
+        "category": {
+            "name": "Gafas",
+            "id": "googles"
+        },
+        "price": 260000
+    },
+    {
+        "id": "speedsocket-2.0-rojo-azul-vapor",
+        "title": "Speedsocket 2.0 Rojo/Azul/Vapor",
+        "image": "./img/googles/speedsocket-2.0-rojo-azul-vapor.png",
+        "category": {
+            "name": "Gafas",
+            "id": "googles"
+        },
+        "price": 260000
+    },
+    {
+        "id": "speedsocket-2.0-rosa-dorado",
+        "title": "Speedsocket 2.0 Rosa/Dorado",
+        "image": "./img/googles/speedsocket-2.0-rosa-dorado.png",
+        "category": {
+            "name": "Gafas",
+            "id": "googles"
+        },
+        "price": 260000
+    },
+    {
+        "id": "speedsocket-2.0-verde-blanco-dorado",
+        "title": "Speedsocket 2.0 Verde/Blanco/Dorado",
+        "image": "./img/googles/speedsocket-2.0-verde-blanco-dorado.png",
+        "category": {
+            "name": "Gafas",
+            "id": "googles"
+        },
+        "price": 260000
     },
     {
         "id": "arena-paddles-negra",
@@ -127,7 +127,7 @@
             "name": "Implementos",
             "id": "training-items"
         },
-        "price": 1000
+        "price": 105000
     },
     {
         "id": "arena-paddles-fingers-negra",
@@ -137,7 +137,7 @@
             "name": "Implementos",
             "id": "training-items"
         },
-        "price": 1000
+        "price": 80000
     },
     {
         "id": "arena-powerfins-2-pro-azul-azul",
@@ -147,7 +147,7 @@
             "name": "Implementos",
             "id": "training-items"
         },
-        "price": 1000
+        "price": 350000
     },
     {
         "id": "arena-powerfins-2-pro-blanco-rosa",
@@ -157,7 +157,7 @@
             "name": "Implementos",
             "id": "training-items"
         },
-        "price": 1000
+        "price": 350000
     },
     {
         "id": "arena-powerfins-2-pro-dorado-negro",
@@ -167,7 +167,7 @@
             "name": "Implementos",
             "id": "training-items"
         },
-        "price": 1000
+        "price": 350000
     },
     {
         "id": "arena-powerfins-2-pro-gris-negro",
@@ -177,7 +177,7 @@
             "name": "Implementos",
             "id": "training-items"
         },
-        "price": 1000
+        "price": 350000
     },
     {
         "id": "arena-powerfins-2-pro-morado-verde",
@@ -187,7 +187,7 @@
             "name": "Implementos",
             "id": "training-items"
         },
-        "price": 1000
+        "price": 350000
     },
     {
         "id": "arena-powerfins-2-pro-naranja-negro",
@@ -197,7 +197,7 @@
             "name": "Implementos",
             "id": "training-items"
         },
-        "price": 1000
+        "price": 350000
     },
     {
         "id": "arena-powerfins-2-pro-rojo-negro",
@@ -207,7 +207,7 @@
             "name": "Implementos",
             "id": "training-items"
         },
-        "price": 1000
+        "price": 350000
     },
     {
         "id": "arena-powerfins-2-pro-rosa-rosa",
@@ -217,7 +217,7 @@
             "name": "Implementos",
             "id": "training-items"
         },
-        "price": 1000
+        "price": 350000
     },
     {
         "id": "arena-powerfins-2-pro-verde-negro",
@@ -227,7 +227,7 @@
             "name": "Implementos",
             "id": "training-items"
         },
-        "price": 1000
+        "price": 350000
     },
     {
         "id": "arena-powerfins-2-pro-verde-verde",
@@ -237,7 +237,7 @@
             "name": "Implementos",
             "id": "training-items"
         },
-        "price": 1000
+        "price": 350000
     },
     {
         "id": "TYR-catalyst-S",
@@ -247,7 +247,7 @@
             "name": "Implementos",
             "id": "training-items"
         },
-        "price": 1000
+        "price": 130000
     },
     {
         "id": "TYR-catalyst-M",
@@ -257,7 +257,7 @@
             "name": "Implementos",
             "id": "training-items"
         },
-        "price": 1000
+        "price": 130000
     },
     {
         "id": "TYR-catalyst-L",
@@ -267,7 +267,7 @@
             "name": "Implementos",
             "id": "training-items"
         },
-        "price": 1000
+        "price": 130000
     },
     {
         "id": "TYR-catalyst-XL",
@@ -277,7 +277,7 @@
             "name": "Implementos",
             "id": "training-items"
         },
-        "price": 1000
+        "price": 130000
     },
     {
         "id": "TYR-catalyst-XXL",
@@ -287,6 +287,6 @@
             "name": "Implementos",
             "id": "training-items"
         },
-        "price": 1000
+        "price": 130000
     }
 ]
