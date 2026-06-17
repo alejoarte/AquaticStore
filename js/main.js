@@ -1,6 +1,12 @@
 const url = "./js/products.json";
 let products = [];
 
+const CATEGORY_LABELS = {
+    googles: "Gafas",
+    fastkins: "Trajes de competición",
+    "training-items": "Implementos"
+};
+
 const TOAST_STYLE = {
     background: "linear-gradient(to right, #0ea5e9 0%, #0284c7 100%)",
     borderRadius: "2rem",
@@ -37,8 +43,7 @@ function filterProducts(buttonId) {
     });
 
     if (buttonId !== "all-products") {
-        const productCategory = products.find(product => product.category.id === buttonId);
-        mainTitle.innerText = productCategory.category.name;
+        mainTitle.innerText = CATEGORY_LABELS[buttonId] ?? "Todos los productos";
         const productsButton = products.filter(product => product.category.id === buttonId);
         uploadProducts(productsButton);
     } else {
@@ -63,6 +68,11 @@ buttonsCategoriesMobile.forEach(button => {
 
 function uploadProducts(chosenProducts) {
     productsContainer.innerHTML = "";
+
+    if (chosenProducts.length === 0) {
+        productsContainer.innerHTML = `<p class="catalog-empty">No hay productos en esta categoría por ahora.</p>`;
+        return;
+    }
 
     chosenProducts.forEach(product => {
         const div = document.createElement("div");

@@ -1,42 +1,292 @@
 [
     {
-        "id": "fastkin-01",
-        "title": "Traje Fastkin 01",
-        "image": "./img/1.png",
-        "category": {
-            "name": "Trajes de competición",
-            "id": "fastkins"
-        },
-        "price": 1000
-    },
-    {
-        "id": "googles-01",
-        "title": "Gafas 01",
-        "image": "./img/2.png",
+        "id": "speedo-pure-focus",
+        "title": "Speedo Pure Focus",
+        "image": "./img/googles/speedo-pure-focus.png",
         "category": {
             "name": "Gafas",
             "id": "googles"
         },
-        "price": 2000
+        "price": 1000
     },
     {
-        "id": "training-item-01",
-        "title": "Implemento 01",
-        "image": "./img/1.png",
+        "id": "speedsocket-2.0-blanco-azul-plateado",
+        "title": "Speedsocket 2.0 Blanco/Azul/Plateado",
+        "image": "./img/googles/speedsocket-2.0-blanco-azul-plateado.png",
+        "category": {
+            "name": "Gafas",
+            "id": "googles"
+        },
+        "price": 1000
+    },
+        {
+        "id": "speedsocket-2.0-blanco-azul-verde",
+        "title": "Speedsocket 2.0 Azul/Verde",
+        "image": "./img/googles/speedsocket-2.0-azul-verde.png",
+        "category": {
+            "name": "Gafas",
+            "id": "googles"
+        },
+        "price": 1000
+    },
+    {
+        "id": "speedsocket-2.0-blanco-plata",
+        "title": "Speedsocket 2.0 Blanco/Plata",
+        "image": "./img/googles/speedsocket-2.0-blanco-plata.png",
+        "category": {
+            "name": "Gafas",
+            "id": "googles"
+        },
+        "price": 1000
+    },
+    {
+        "id": "speedsocket-2.0-blanco-vapor",
+        "title": "Speedsocket 2.0 Blanco/Vapor",
+        "image": "./img/googles/speedsocket-2.0-blanco-vapor.png",
+        "category": {
+            "name": "Gafas",
+            "id": "googles"
+        },
+        "price": 1000
+    },
+    {
+        "id": "speedsocket-2.0-naranja-verde-rosa-azul",
+        "title": "Speedsocket 2.0 Naranja/Verde/Rosa/Azul",
+        "image": "./img/googles/speedsocket-2.0-naranja-verde-rosa-azul.png",
+        "category": {
+            "name": "Gafas",
+            "id": "googles"
+        },
+        "price": 1000
+    },
+    {
+        "id": "speedsocket-2.0-rojo-azul-vapor",
+        "title": "Speedsocket 2.0 Rojo/Azul/Vapor",
+        "image": "./img/googles/speedsocket-2.0-rojo-azul-vapor.png",
+        "category": {
+            "name": "Gafas",
+            "id": "googles"
+        },
+        "price": 1000
+    },
+    {
+        "id": "speedsocket-2.0-rojo-humo",
+        "title": "Speedsocket 2.0 Rojo/Humo",
+        "image": "./img/googles/speedsocket-2.0-rojo-humo.png",
+        "category": {
+            "name": "Gafas",
+            "id": "googles"
+        },
+        "price": 1000
+    },
+    {
+        "id": "speedsocket-2.0-rosa-dorado",
+        "title": "Speedsocket 2.0 Rosa/Dorado",
+        "image": "./img/googles/speedsocket-2.0-rosa-dorado.png",
+        "category": {
+            "name": "Gafas",
+            "id": "googles"
+        },
+        "price": 1000
+    },
+    {
+        "id": "speedsocket-2.0-verde-blanco-dorado",
+        "title": "Speedsocket 2.0 Verde/Blanco/Dorado",
+        "image": "./img/googles/speedsocket-2.0-verde-blanco-dorado.png",
+        "category": {
+            "name": "Gafas",
+            "id": "googles"
+        },
+        "price": 1000
+    },
+    {
+        "id": "speedsocket-2.0-verde-negro-dorado",
+        "title": "Speedsocket 2.0 Verde/Negro/Dorado",
+        "image": "./img/googles/speedsocket-2.0-verde-negro-dorado.png",
+        "category": {
+            "name": "Gafas",
+            "id": "googles"
+        },
+        "price": 1000
+    },
+    {
+        "id": "arena-paddles-negra",
+        "title": "Arena Paddles Negro",
+        "image": "./img/accesories/arena-paddles-negra.png",
         "category": {
             "name": "Implementos",
             "id": "training-items"
         },
-        "price": 2000
+        "price": 105000
     },
     {
-        "id": "training-item-01",
-        "title": "Implemento 01",
-        "image": "./img/2.png",
+        "id": "arena-paddles-verde",
+        "title": "Arena Paddles Verde",
+        "image": "./img/accesories/arena-paddles-verde.png",
         "category": {
             "name": "Implementos",
             "id": "training-items"
         },
-        "price": 2000
+        "price": 1000
+    },
+    {
+        "id": "arena-paddles-fingers-negra",
+        "title": "Arena Paddles Fingers Negro",
+        "image": "./img/accesories/arena-paddles-fingers-negra.png",
+        "category": {
+            "name": "Implementos",
+            "id": "training-items"
+        },
+        "price": 1000
+    },
+    {
+        "id": "arena-powerfins-2-pro-azul-azul",
+        "title": "Arena Powerfins 2 Pro Azul/Azul",
+        "image": "./img/accesories/arena-powerfins-2-pro-azul-azul.png",
+        "category": {
+            "name": "Implementos",
+            "id": "training-items"
+        },
+        "price": 1000
+    },
+    {
+        "id": "arena-powerfins-2-pro-blanco-rosa",
+        "title": "Arena Powerfins 2 Pro Blanco/Rosa",
+        "image": "./img/accesories/arena-powerfins-2-pro-blanco-rosa.png",
+        "category": {
+            "name": "Implementos",
+            "id": "training-items"
+        },
+        "price": 1000
+    },
+    {
+        "id": "arena-powerfins-2-pro-dorado-negro",
+        "title": "Arena Powerfins 2 Pro Dorado/Negro",
+        "image": "./img/accesories/arena-powerfins-2-pro-dorado-negro.png",
+        "category": {
+            "name": "Implementos",
+            "id": "training-items"
+        },
+        "price": 1000
+    },
+    {
+        "id": "arena-powerfins-2-pro-gris-negro",
+        "title": "Arena Powerfins 2 Pro Gris/Negro",
+        "image": "./img/accesories/arena-powerfins-2-pro-gris-negro.png",
+        "category": {
+            "name": "Implementos",
+            "id": "training-items"
+        },
+        "price": 1000
+    },
+    {
+        "id": "arena-powerfins-2-pro-morado-verde",
+        "title": "Arena Powerfins 2 Pro Morado/Verde",
+        "image": "./img/accesories/arena-powerfins-2-pro-morado-verde.png",
+        "category": {
+            "name": "Implementos",
+            "id": "training-items"
+        },
+        "price": 1000
+    },
+    {
+        "id": "arena-powerfins-2-pro-naranja-negro",
+        "title": "Arena Powerfins 2 Pro Naranja/Negro",
+        "image": "./img/accesories/arena-powerfins-2-pro-naranja-negro.png",
+        "category": {
+            "name": "Implementos",
+            "id": "training-items"
+        },
+        "price": 1000
+    },
+    {
+        "id": "arena-powerfins-2-pro-rojo-negro",
+        "title": "Arena Powerfins 2 Pro Rojo/Negro",
+        "image": "./img/accesories/arena-powerfins-2-pro-rojo-negro.png",
+        "category": {
+            "name": "Implementos",
+            "id": "training-items"
+        },
+        "price": 1000
+    },
+    {
+        "id": "arena-powerfins-2-pro-rosa-rosa",
+        "title": "Arena Powerfins 2 Pro Rosa/Rosa",
+        "image": "./img/accesories/arena-powerfins-2-pro-rosa-rosa.png",
+        "category": {
+            "name": "Implementos",
+            "id": "training-items"
+        },
+        "price": 1000
+    },
+    {
+        "id": "arena-powerfins-2-pro-verde-negro",
+        "title": "Arena Powerfins 2 Pro Verde/Negro",
+        "image": "./img/accesories/arena-powerfins-2-pro-verde-negro.png",
+        "category": {
+            "name": "Implementos",
+            "id": "training-items"
+        },
+        "price": 1000
+    },
+    {
+        "id": "arena-powerfins-2-pro-verde-verde",
+        "title": "Arena Powerfins 2 Pro Verde/Verde",
+        "image": "./img/accesories/arena-powerfins-2-pro-verde-verde.png",
+        "category": {
+            "name": "Implementos",
+            "id": "training-items"
+        },
+        "price": 1000
+    },
+    {
+        "id": "TYR-catalyst-S",
+        "title": "TYR Catalyst Talla S",
+        "image": "./img/accesories/TYR-catalyst-S.png",
+        "category": {
+            "name": "Implementos",
+            "id": "training-items"
+        },
+        "price": 1000
+    },
+    {
+        "id": "TYR-catalyst-M",
+        "title": "TYR Catalyst Talla M",
+        "image": "./img/accesories/TYR-catalyst-M.png",
+        "category": {
+            "name": "Implementos",
+            "id": "training-items"
+        },
+        "price": 1000
+    },
+    {
+        "id": "TYR-catalyst-L",
+        "title": "TYR Catalyst Talla L",
+        "image": "./img/accesories/TYR-catalyst-L.png",
+        "category": {
+            "name": "Implementos",
+            "id": "training-items"
+        },
+        "price": 1000
+    },
+    {
+        "id": "TYR-catalyst-XL",
+        "title": "TYR Catalyst Talla XL",
+        "image": "./img/accesories/TYR-catalyst-XL.png",
+        "category": {
+            "name": "Implementos",
+            "id": "training-items"
+        },
+        "price": 1000
+    },
+    {
+        "id": "TYR-catalyst-XXL",
+        "title": "TYR Catalyst Talla XXL",
+        "image": "./img/accesories/TYR-catalyst-XXL.png",
+        "category": {
+            "name": "Implementos",
+            "id": "training-items"
+        },
+        "price": 1000
     }
 ]
