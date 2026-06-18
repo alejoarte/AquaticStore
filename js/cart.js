@@ -37,7 +37,11 @@ function loadProductsCart() {
                 </div>
                 <div class="cart-product-price">
                     <small>Precio</small>
-                    <p>${formatPrice(product.price)}</p>
+                    ${renderProductPrice(product, {
+                        priceClass: "cart-price",
+                        originalClass: "cart-price-original",
+                        wrapperClass: "cart-pricing"
+                    })}
                 </div>
                 <div class="cart-product-subtotal">
                     <small>Subtotal</small>

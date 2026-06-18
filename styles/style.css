@@ -377,6 +377,20 @@ button {
     border-radius: var(--radius-pill);
 }
 
+.product-discount-badge {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    background-color: var(--danger);
+    color: var(--surface);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    padding: 0.3rem 0.55rem;
+    border-radius: var(--radius-pill);
+    box-shadow: var(--shadow-sm);
+}
+
 .product-details {
     padding: 1rem 1.1rem 1.1rem;
     display: flex;
@@ -393,10 +407,35 @@ button {
     line-height: 1.3;
 }
 
+.product-pricing,
+.cart-pricing {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.product-price-original,
+.cart-price-original {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    text-decoration: line-through;
+}
+
 .product-price {
     font-size: 1.1rem;
     font-weight: 700;
     color: var(--accent);
+}
+
+.product-price--sale,
+.cart-price--sale {
+    color: var(--danger);
+}
+
+.cart-price {
+    font-weight: 600;
+    margin-top: 0.15rem;
 }
 
 .product-add {
@@ -527,6 +566,15 @@ button {
 .cart-product-subtotal p {
     font-weight: 600;
     margin-top: 0.15rem;
+}
+
+.cart-product-price .cart-pricing {
+    margin-top: 0.15rem;
+}
+
+.cart-product-price .cart-price-original {
+    margin-top: 0;
+    font-weight: 500;
 }
 
 .delete-product-cart {

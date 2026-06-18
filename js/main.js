@@ -103,10 +103,11 @@ function uploadProducts(chosenProducts) {
             <div class="product-image-container">
                 <img class="product-image" src="${product.image}" alt="${product.title}">
                 <span class="product-category">${product.category.name}</span>
+                ${renderDiscountBadge(product)}
             </div>
             <div class="product-details">
                 <h3 class="product-title">${product.title}</h3>
-                <p class="product-price">${formatPrice(product.price)}</p>
+                ${renderProductPrice(product)}
                 <button class="product-add" id="${product.id}">Agregar</button>
             </div>
         `;
