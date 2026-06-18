@@ -9,6 +9,14 @@ const DISCOUNT_RULES = [
     { prefix: "TYR-catalyst", originalPrice: 150000 }
 ];
 
+function isProductComingSoon(product) {
+    return product.comingSoon === true;
+}
+
+function renderComingSoonLabel(className = "product-coming-soon") {
+    return `<p class="${className}">Disponibles próximamente</p>`;
+}
+
 function findDiscountRule(productId) {
     return DISCOUNT_RULES.find(rule => {
         if (rule.id) {
@@ -33,6 +41,10 @@ function getProductDiscount(product) {
 }
 
 function renderProductPrice(product, options = {}) {
+    if (isProductComingSoon(product)) {
+        return "";
+    }
+
     const discount = getProductDiscount(product);
     const priceClass = options.priceClass ?? "product-price";
     const originalClass = options.originalClass ?? "product-price-original";
@@ -51,6 +63,10 @@ function renderProductPrice(product, options = {}) {
 }
 
 function renderDiscountBadge(product) {
+    if (isProductComingSoon(product)) {
+        return "";
+    }
+
     const discount = getProductDiscount(product);
 
     if (!discount) {

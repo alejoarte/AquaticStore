@@ -107,8 +107,8 @@ function uploadProducts(chosenProducts) {
             </div>
             <div class="product-details">
                 <h3 class="product-title">${product.title}</h3>
-                ${renderProductPrice(product)}
-                <button class="product-add" id="${product.id}">Agregar</button>
+                ${isProductComingSoon(product) ? renderComingSoonLabel() : renderProductPrice(product)}
+                <button class="product-add" id="${product.id}" ${isProductComingSoon(product) ? "disabled" : ""}>Agregar</button>
             </div>
         `;
 
@@ -139,10 +139,14 @@ if (itemsInCartLS) {
 }
 
 function addToCart(e) {
-    showToast("Agregado al carrito");
-
     const idButton = e.currentTarget.id;
     const productAdded = products.find(product => product.id === idButton);
+
+    if (isProductComingSoon(productAdded)) {
+        return;
+    }
+
+    showToast("Agregado al carrito");
 
     if (itemsInCart.some(product => product.id === idButton)) {
         const index = itemsInCart.findIndex(product => product.id === idButton);

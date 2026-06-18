@@ -428,6 +428,12 @@ button {
     color: var(--accent);
 }
 
+.product-coming-soon {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-muted);
+}
+
 .product-price--sale,
 .cart-price--sale {
     color: var(--danger);
@@ -455,6 +461,15 @@ button {
 
 .product-add:hover {
     background-color: var(--accent-hover);
+}
+
+.product-add:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.product-add:disabled:hover {
+    background-color: var(--accent);
 }
 
 /* ── Cart ── */

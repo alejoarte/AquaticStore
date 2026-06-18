@@ -47,7 +47,8 @@
             "name": "Gafas",
             "id": "googles"
         },
-        "price": 270000
+        "price": 270000,
+        "comingSoon": true
     },
     {
         "id": "speedsocket-2.0-blanco-vapor",
@@ -77,7 +78,8 @@
             "name": "Gafas",
             "id": "googles"
         },
-        "price": 270000
+        "price": 270000,
+        "comingSoon": true
     },
     {
         "id": "speedsocket-2.0-rojo-azul-vapor",
@@ -87,7 +89,8 @@
             "name": "Gafas",
             "id": "googles"
         },
-        "price": 270000
+        "price": 270000,
+        "comingSoon": true
     },
     {
         "id": "speedsocket-2.0-rosa-dorado",
@@ -97,7 +100,8 @@
             "name": "Gafas",
             "id": "googles"
         },
-        "price": 270000
+        "price": 270000,
+        "comingSoon": true
     },
     {
         "id": "speedsocket-2.0-verde-blanco-dorado",
@@ -107,7 +111,8 @@
             "name": "Gafas",
             "id": "googles"
         },
-        "price": 270000
+        "price": 270000,
+        "comingSoon": true
     },
     {
         "id": "arena-paddles-negra",
