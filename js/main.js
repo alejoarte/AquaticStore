@@ -2,6 +2,7 @@ const url = "./js/products.json";
 let products = [];
 let currentCategory = "all-products";
 let currentSort = "price-asc";
+let currentView = localStorage.getItem("catalog-view") || "comfortable";
 
 const CATEGORY_LABELS = {
     googles: "Gafas",
@@ -21,6 +22,7 @@ const buttonsCategories = document.querySelectorAll(".btn-category");
 const buttonsCategoriesMobile = document.querySelectorAll(".btn-category-mobile");
 const mainTitle = document.querySelector("#main-title");
 const sortProductsSelect = document.querySelector("#sort-products");
+const viewButtons = document.querySelectorAll(".view-btn");
 let addButtons = document.querySelectorAll(".product-add");
 const numberItems = document.querySelector("#number-items");
 
@@ -87,6 +89,23 @@ sortProductsSelect.addEventListener("change", (e) => {
     currentSort = e.target.value;
     renderProducts();
 });
+
+function applyView() {
+    productsContainer.classList.toggle("products-container--compact", currentView === "compact");
+    viewButtons.forEach(button => {
+        button.setAttribute("aria-pressed", button.dataset.view === currentView ? "true" : "false");
+    });
+}
+
+viewButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        currentView = button.dataset.view;
+        localStorage.setItem("catalog-view", currentView);
+        applyView();
+    });
+});
+
+applyView();
 
 function uploadProducts(chosenProducts) {
     productsContainer.innerHTML = "";
