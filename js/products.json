@@ -293,5 +293,45 @@
             "id": "training-items"
         },
         "price": 130000
+    },
+    {
+        "id": "speedo-power-plus-S",
+        "title": "Speedo Power Plus Talla S",
+        "image": "./img/accesories/Speedo-paddles-S.png",
+        "category": {
+            "name": "Implementos",
+            "id": "training-items"
+        },
+        "price": 120000
+    },
+    {
+        "id": "speedo-power-plus-M",
+        "title": "Speedo Power Plus Talla M",
+        "image": "./img/accesories/Speedo-paddles-M.png",
+        "category": {
+            "name": "Implementos",
+            "id": "training-items"
+        },
+        "price": 120000
+    },
+    {
+        "id": "speedo-power-plus-L",
+        "title": "Speedo Power Plus Talla L",
+        "image": "./img/accesories/Speedo-paddles-L.png",
+        "category": {
+            "name": "Implementos",
+            "id": "training-items"
+        },
+        "price": 120000
+    },
+    {
+        "id": "speedo-power-plus-XL",
+        "title": "Speedo Power Plus Talla XL",
+        "image": "./img/accesories/Speedo-paddles-XL.png",
+        "category": {
+            "name": "Implementos",
+            "id": "training-items"
+        },
+        "price": 120000
     }
 ]
