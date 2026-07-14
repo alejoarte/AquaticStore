@@ -135,6 +135,16 @@
         "price": 105000
     },
     {
+        "id": "arena-paddles-verde-oscuro",
+        "title": "Arena Paddles Verde Oscuro",
+        "image": "./img/accesories/arena-paddles-verde-oscuro.png",
+        "category": {
+            "name": "Implementos",
+            "id": "training-items"
+        },
+        "price": 105000
+    },
+    {
         "id": "arena-paddles-fingers-negra",
         "title": "Arena Paddles Fingers Negro",
         "image": "./img/accesories/arena-paddles-fingers-negra.png",

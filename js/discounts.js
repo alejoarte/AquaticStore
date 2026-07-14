@@ -5,6 +5,7 @@ const DISCOUNT_RULES = [
     { id: "arena-paddles-fingers-negra", originalPrice: 91100 },
     { id: "arena-paddles-negra", originalPrice: 121600 },
     { id: "arena-paddles-verde", originalPrice: 121600 },
+    { id: "arena-paddles-verde-oscuro", originalPrice: 121600 },
     { prefix: "arena-powerfins-2-pro", originalPrice: 425500 },
     { prefix: "TYR-catalyst", originalPrice: 150000 },
     { prefix: "speedo-power-plus", originalPrice: 189900 }
